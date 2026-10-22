@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Question For You, Shivani ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #fff0f3 0%, #ffccd5 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(217, 4, 41, 0.15);
+            max-width: 420px;
+            width: 100%;
+            position: relative;
+        }
+        h1 {
+            color: #d90429;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+            min-height: 50px;
+        }
+        button {
+            padding: 12px 22px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+            box-shadow: 0 4px 12px rgba(255, 77, 109, 0.4);
+        }
+        #yesBtn:hover {
+            background-color: #d90429;
+            transform: scale(1.05);
+        }
+        #noBtn {
+            background-color: #adb5bd;
+            color: white;
+            transition: 0.1s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="mainCard">
+        <h1>Hey Shivani... 🌸</h1>
+        <p>Pata hai, tumse baatein karte-karte kab yeh dosti ek special feeling me badal gayi, pata hi nahi chala. Tumhara woh seedha-saadha andaz mujhe sabse alag lagta hai.</p>
+        <p>Kya tum meri official wali girlfriend banogi? ❤️</p>
+        
+        <div class="btn-group">
+            <button id="yesBtn" onclick="sayYes()">YES! Bilkul 🥰</button>
+            <button id="noBtn" onmouseover="moveNo()" onclick="moveNo()">Sochna padega 🙈</button>
+        </div>
+    </div>
+
+    <script>
+        function moveNo() {
+            const noBtn = document.getElementById('noBtn');
+            noBtn.style.position = 'fixed';
+            
+            const x = Math.random() * (window.innerWidth - 160);
+            const y = Math.random() * (window.innerHeight - 60);
+            
+            noBtn.style.left = Math.max(10, Math.min(x, window.innerWidth - 160)) + 'px';
+            noBtn.style.top = Math.max(10, Math.min(y, window.innerHeight - 60)) + 'px';
+        }
+
+        function sayYes() {
+            document.getElementById('mainCard').innerHTML = `
+                <h1 style="color: #d90429; font-size: 24px; margin-bottom: 15px;">Yayyy! ❤️🥰</h1>
+                <p style="font-size: 16px; color: #333;">Mujhe pata hi tha tumhara yahi jawab hoga! Tum sach me meri duniya ki sabse pyari ladki ban gayi hai.</p>
+                <p style="font-weight: 600; color: #ff4d6d; margin-top: 20px;">Ab jaldi se WhatsApp ya call pe aa aur mujhe batao ! 🚀</p>
+
+                <p style="font-weight: 600; color: #ff4d6d; margin-top: 20px;">I love you so much  ❤️🥰 ..... thankyou for choosing me ! 🚀</p>
+            `;
+        }
+    </script>
+</body>
+</html>
